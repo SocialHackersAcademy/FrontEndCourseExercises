@@ -10,26 +10,35 @@
 <body>
     <script>
 
-        // 1) Type of function? 
-        function add7() {
-            // Your code goes here...
+        // 1) Type of function? Function Declaration
+        function add7(num) {
+            return num;
         }
 
-        // 2) Type of function?
-        const multiply = function () {
-            // Your code goes here...
+        console.log(add7(7));
+
+        // 2) Type of function? Function Expression
+        const multiply = function (a, b) {
+            return a*b;
         }
 
-        // 3) Type of function?
-        let capitalize = () => {
-            // Your code goes here...
+        console.log(multiply(5,5));
+
+        // 3) Type of function? Arrow Function
+        let capitalize = (string) => {
+            return string.charAt(0).toUpperCase() + string.slice(1);
         }
 
-        // 4) Type of function?
-        function lastLetter() {
-            // Your code goes here...
+        console.log(capitalize("sentence"));
+
+        // 4) Type of function? Function Declaration
+        function lastLetter(abcd) {
+            let lastLetter = "abcd".slice(-1);
+            return lastLetter;
         }
-        
+
+        console.log(lastLetter(lastLetter));
+
     </script>
 </body>
 
