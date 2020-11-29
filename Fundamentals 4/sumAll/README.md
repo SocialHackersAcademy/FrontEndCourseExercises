@@ -14,3 +14,12 @@ Think about how you would do this on pen and paper and then how you might transl
 - loop through the given numbers ([link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration))
 - on each iteration add the number to the sum
 - return the sum after finishing the loop
+
+## FAQ
+
+- Q: _Is the input supposed to be an array ([ 1,4 ]) or just numbers ( 1,4 )?_
+  - A: It's just 2 numbers ( 1,4 ).
+
+___
+
+### UPDATED: 26.11.2020
