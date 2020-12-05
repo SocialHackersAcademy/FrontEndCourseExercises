@@ -10,3 +10,4 @@ let startSum = 1;
         }
 
 module.exports = sumAll
+
