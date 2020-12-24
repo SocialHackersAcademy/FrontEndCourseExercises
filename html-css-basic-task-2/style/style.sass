@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap')
+
+$phone-width: 600px
+$tablet-width: 601px
+$tablet-height: 768px
+$desktop-width: 1025px
+$desktop-width-2: 1367px
+
+@mixin orientation($direction)
+    $orientation-landscape: "(orientation:landscape)"
+    $orientation-portrait: "(orientation:portrait)"
+    @if $direction == landscape
+        @media #{$orientation-landscape}
+            @content
+    @if $direction == portrait
+        @media #{$orientation-portrait}
+            @content
+
+@mixin phone
+    @media (max-width: #{$phone-width})
+        @content
+
+@mixin tablet-portrait
+    @include orientation(portrait)
+    @media (min-width: #{$tablet-height}) and (min-height: #{$desktop-width - 1px}) and (max-width: #{$desktop-width - 1px}) and (max-height: #{$desktop-width-2})
+        @content
+
+@mixin tablet-landscape
+    @include orientation(landscape)
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width-2 - 1px})
+        @content
+
+$menu-w: 18%
+$logo-s: 100px
+$h1-s: 40px
+$menu-c: #92448B
+$navlinks-c: #FFFFFF
+$navlinks-hover: #F9F871
+$heading-c: #92448B
+//----------------------------------------------------------------------
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Montserrat', sans-serif
+
+html, body, .page-wrapper
+    height: 100%
+    width: 100%
+    line-height: 1.8
+
+.page-wrapper
+    padding-left: $menu-w + 6%
+    padding-right: 7%
+    @include tablet-portrait
+        padding-left: $menu-w + 11%
+        padding-right: 10%
+
+.menu
+    height: 100vh
+    width: $menu-w
+    position: fixed
+    top: 0
+    left: 0
+    background: $menu-c
+    box-shadow: 10px 0px 30px -9px rgba(0,0,0,0.5)
+    @include tablet-portrait
+        width: $menu-w + 5%
+
+    .logo
+        display: flex
+        img
+            margin: 40px auto
+            width: $logo-s
+            height: $logo-s
+
+    ul
+        list-style-type: none
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-flow: row wrap
+
+    a
+        text-decoration: none
+        color: $navlinks-c
+        &:hover
+            color: $navlinks-hover
+
+    .nav-links
+        margin: 20px 10px
+        text-align: center
+        font-weight: 700
+        flex-grow: 2
+        transition: 0.5s all ease
+        &:hover
+            transform: scale(1.1)
+
+h1
+    text-align: center
+    margin: 50px 0
+    font-size: $h1-s
+    color: $heading-c
+
+.container
+    h2
+        font-size: $h1-s - 8px
+        margin: 50px 0 20px 0
+        color: $heading-c
+
+    span
+        font-size: $h1-s - 20px
+        text-align: justify
+        a
+            color: black
+
+    .inline
+        display: inline-block
+
+    .learn
+        margin-left: 20px
+        font-size: 14px
+
+    figure
+        text-align: center
+        margin: 30px 0
+        img
+            margin: auto auto
+            width: 50%
+            object-fit: contain
+            box-shadow: 0px 10px 35px -10px rgba(0,0,0,0.6)
+        figcaption
+            font-style: italic
+            font-size: $h1-s - 22px
+            margin: 10px 0
+
+footer
+    width: 100%
+    padding: 30px 0
+    text-align: center
+    line-height: 1.2
+    font-size: 12px
+    img
+        width: 30px
+        height: 30px
