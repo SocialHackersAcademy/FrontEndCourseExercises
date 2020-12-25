@@ -31,7 +31,7 @@ html, body, .page-wrapper {
   position: fixed;
   top: 0;
   left: 0;
-  background: #92448B;
+  background: #843E7F;
   -webkit-box-shadow: 10px 0px 30px -9px rgba(0, 0, 0, 0.5);
           box-shadow: 10px 0px 30px -9px rgba(0, 0, 0, 0.5);
 }
@@ -100,16 +100,16 @@ h1 {
   text-align: center;
   margin: 50px 0;
   font-size: 40px;
-  color: #92448B;
+  color: #843E7F;
 }
 
 .container h2 {
   font-size: 32px;
   margin: 50px 0 20px 0;
-  color: #92448B;
+  color: #843E7F;
 }
 
-.container span {
+.container div {
   font-size: 20px;
   text-align: justify;
 }
