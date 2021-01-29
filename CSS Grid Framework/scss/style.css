@@ -1,3 +1,7 @@
+h2, h3 {
+  color: #2b0a3d;
+}
+
 header #nav-upper {
   margin: 1rem;
   margin-top: 1.5rem;
@@ -32,5 +36,43 @@ header #nav-upper-right {
 header .medium-screen,
 header .big-screen {
   display: none;
+}
+
+#hero {
+  background-image: url("../images/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 21.3rem;
+}
+
+#hero #hero-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 5rem;
+  left: 1rem;
+}
+
+#hero #hero-text-wrapper a {
+  text-decoration: none;
+  color: #2b0a3d;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+#hero #hero-text-wrapper .tagline {
+  background: white;
+  padding: .4rem;
+}
+
+#hero #hero-text-wrapper .play {
+  position: relative;
+  top: .6rem;
+  padding: .5rem;
+}
+
+#hero #hero-text-wrapper .fa-play-circle {
+  color: #0070ad;
+  font-size: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

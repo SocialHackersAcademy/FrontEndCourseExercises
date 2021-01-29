@@ -1,4 +1,10 @@
 $purple: #2b0a3d;
+$blue: #0070ad;
+$white: white;
+
+h2, h3 {
+    color: $purple;
+}
 
 header {
 
@@ -15,7 +21,6 @@ header {
         }
 
         #logo {
-            // width: 9.8rem;
             max-width: 70%;
             position: relative;
             top: .6rem;
@@ -37,5 +42,44 @@ header {
     .medium-screen,
     .big-screen {
         display: none;
+    }
+}
+
+#hero {
+
+    background-image: url('../images/hero.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 21.3rem;
+
+    #hero-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 5rem;
+        left: 1rem;
+
+        a {
+            text-decoration: none;
+            color: $purple;
+            font-weight: bold;
+            font-size: 1.7rem;
+        }
+
+        .tagline {
+            background: $white;
+            padding: .4rem;
+        }
+
+        .play {
+            position: relative;
+            top: .6rem;
+            padding: .5rem;
+        }
+
+        .fa-play-circle {
+            color: $blue;
+            font-size: 2rem;
+        }
     }
 }
