@@ -1,0 +1,41 @@
+$purple: #2b0a3d;
+
+header {
+
+    #nav-upper {
+        margin: 1rem;
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .fa-bars {
+            font-size: 2rem;
+            color: $purple;
+        }
+
+        #logo {
+            // width: 9.8rem;
+            max-width: 70%;
+            position: relative;
+            top: .6rem;
+            left: .7rem;
+        }
+    }
+
+    #nav-upper-left {
+        width: 70%;
+    }
+
+    #nav-upper-right {
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+        margin-right: -2rem;
+    }
+
+    .medium-screen,
+    .big-screen {
+        display: none;
+    }
+}

@@ -1,0 +1,36 @@
+header #nav-upper {
+  margin: 1rem;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header #nav-upper .fa-bars {
+  font-size: 2rem;
+  color: #2b0a3d;
+}
+
+header #nav-upper #logo {
+  max-width: 70%;
+  position: relative;
+  top: .6rem;
+  left: .7rem;
+}
+
+header #nav-upper-left {
+  width: 70%;
+}
+
+header #nav-upper-right {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin-right: -2rem;
+}
+
+header .medium-screen,
+header .big-screen {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
