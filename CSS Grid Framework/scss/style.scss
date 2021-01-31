@@ -1,16 +1,153 @@
 $purple: #2b0a3d;
 $blue: #0070ad;
 $white: white;
+$grey: #ececec;
+
+.fa-play-circle {
+    color: $blue;
+    font-size: 2rem;
+}
 
 h2, h3 {
     color: $purple;
+    letter-spacing: .08rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: $purple;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+h5 {
+    font-size: 1.25rem;
+    color: $purple;
+    line-height: 1.5;
+}
+
+h6 {
+    font-size: .61rem;
+    margin: .4rem 0;
+    letter-spacing: .05rem;
+    font-weight: normal;
+}
+
+.underline {
+    background: $purple;
+    height: .25rem;
+    width: 3rem;
+    margin-top: .5rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+
+    margin: 1.5rem 0;
+
+    .text-wrapper {
+        padding: 1.5rem;
+        line-height: 1.4;
+
+        p {
+            line-height: 1.5;
+            margin: 1rem 0;
+        }
+    }
+
+    .text-icon-container {
+        padding: 1.5rem;
+
+        .fa-play-circle {
+            margin: 1.4rem 0 .3rem;
+        }
+    }
+
+    .fa-play-circle {
+        margin: .5rem 1.5rem 1.8rem;
+    }
+
+    img {
+        width: 100%;
+        position: relative;
+        bottom: -.25rem;
+    }
+}
+
+button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem 4rem;
+    color: $blue;
+    border: 2px solid $blue;
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;;
+}
+
+@mixin card-padding {
+    padding: 3rem 1rem;
+}
+
+@mixin grey-card {
+    @include card-padding;
+    background: $grey;
+
+    .card {
+        background: $white;
+    }
+}
+
+@mixin white-card {
+    @include card-padding;
+    background: $white;
+
+    .card {
+        background: $grey;
+    }
+}
+
+@mixin purple-card {
+    @include card-padding;
+    background: $purple;
+
+    h2 {
+        color: $white;
+    }
+
+    .underline {
+        background: $white;
+    }
+
+    .card {
+        background: $white;
+        margin: 2.5rem;
+
+        .text-icon-container {
+            padding: 0;
+
+            .fa-play-circle {
+                margin: .5rem 1.4rem 1.9rem;
+            }
+        }
+    }
+
 }
 
 header {
 
     #nav-upper {
-        margin: 1rem;
-        margin-top: 1.5rem;
+        margin: 1.5rem 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -47,6 +184,7 @@ header {
 
 #hero {
 
+    margin-bottom: 1.9rem;
     background-image: url('../images/hero.jpg');
     background-position: center;
     background-size: cover;
@@ -76,10 +214,23 @@ header {
             top: .6rem;
             padding: .5rem;
         }
-
-        .fa-play-circle {
-            color: $blue;
-            font-size: 2rem;
-        }
     }
+}
+
+#section2,
+#section4 {
+    @include grey-card;
+}
+
+#section3,
+#section6 {
+    @include white-card;
+}
+
+#section5 {
+    @include purple-card;
+}
+
+#section6 {
+    
 }
