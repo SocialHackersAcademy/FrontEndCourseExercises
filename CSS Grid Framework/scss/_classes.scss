@@ -11,19 +11,19 @@
     margin-bottom: 3rem;
 }
 
+.text-wrapper {
+    padding: 1.5rem;
+    line-height: 1.4;
+
+    p {
+        line-height: 1.5;
+        margin: 1rem 0;
+    }
+}
+
 .card {
 
     margin: 1.5rem 0;
-
-    .text-wrapper {
-        padding: 1.5rem;
-        line-height: 1.4;
-
-        p {
-            line-height: 1.5;
-            margin: 1rem 0;
-        }
-    }
 
     .text-icon-container {
         padding: 1.5rem;
