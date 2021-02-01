@@ -346,5 +346,9 @@ header #nav-upper-right {
   #search p {
     margin-right: .6rem;
   }
+  #section10 {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 /*# sourceMappingURL=style.css.map */
