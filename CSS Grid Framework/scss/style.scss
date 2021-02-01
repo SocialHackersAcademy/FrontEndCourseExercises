@@ -80,14 +80,6 @@ header {
     @include grey-card;
 }
 
-#section2 {
-
-    .text-wrapper {
-        padding: 1.5rem 0;
-
-    }
-}
-
 #section3,
 #section6,
 #section7,
@@ -202,5 +194,30 @@ header {
     #footer-logo {
         width: 15rem;
         margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .medium-screen {
+        display: block;
+    }
+
+    #nav-upper-right {
+        position: relative;
+        right: 7rem;
+        width: 30rem;
+    }
+
+    #site,
+    #search {
+        display: flex;
+        flex-direction:row;
+        white-space: nowrap;
+        margin-right: 4rem;
+
+        i, p {
+            margin-right: .6rem;
+        }
     }
 }

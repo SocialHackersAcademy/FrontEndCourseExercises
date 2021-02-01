@@ -169,10 +169,6 @@ header #nav-upper-right {
   background: white;
 }
 
-#section2 .text-wrapper {
-  padding: 1.5rem 0;
-}
-
 #section3,
 #section6,
 #section7,
@@ -327,5 +323,28 @@ header #nav-upper-right {
 #section11 #footer-logo {
   width: 15rem;
   margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .medium-screen {
+    display: block;
+  }
+  #nav-upper-right {
+    position: relative;
+    right: 7rem;
+    width: 30rem;
+  }
+  #site,
+  #search {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    margin-right: 4rem;
+  }
+  #site i, #site p,
+  #search i,
+  #search p {
+    margin-right: .6rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
