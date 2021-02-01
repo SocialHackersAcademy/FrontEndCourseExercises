@@ -1,0 +1,33 @@
+h2, h3 {
+    color: $purple;
+    letter-spacing: .08rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: $purple;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+h5 {
+    font-size: 1.25rem;
+    color: $purple;
+    line-height: 1.5;
+}
+
+h6 {
+    font-size: .61rem;
+    margin: .4rem 0;
+    letter-spacing: .05rem;
+    font-weight: normal;
+}
