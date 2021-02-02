@@ -1,0 +1,50 @@
+.fa-play-circle {
+    color: $blue;
+    font-size: 2rem;
+}
+
+.underline {
+    background: $purple;
+    height: .25rem;
+    width: 3rem;
+    margin-top: .5rem;
+    margin-bottom: 3rem;
+}
+
+.text-wrapper {
+    padding: 1.5rem;
+    line-height: 1.4;
+
+    p {
+        line-height: 1.5;
+        margin: 1rem 0;
+    }
+}
+
+.card {
+
+    margin: 1.5rem 0;
+
+    .text-icon-container {
+        padding: 1.5rem;
+
+        .fa-play-circle {
+            margin: 1.4rem 0 .3rem;
+        }
+    }
+
+    .fa-play-circle {
+        margin: .5rem 1.5rem 1.8rem;
+    }
+
+    img {
+        width: 100%;
+        position: relative;
+        bottom: -.25rem;
+    }
+}
+
+.medium-screen,
+.big-screen {
+    display: none;
+}

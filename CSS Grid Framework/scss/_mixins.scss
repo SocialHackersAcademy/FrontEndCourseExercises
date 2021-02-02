@@ -1,0 +1,60 @@
+@mixin button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem 4rem;
+    color: $blue;
+    border: 2px solid $blue;
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+@mixin card-padding {
+    padding: 3rem 1rem;
+}
+
+@mixin grey-card {
+    @include card-padding;
+    background: $grey;
+
+    .card {
+        background: $white;
+    }
+}
+
+@mixin white-card {
+    @include card-padding;
+    background: $white;
+
+    .card {
+        background: $grey;
+    }
+}
+
+@mixin purple-card {
+    @include card-padding;
+    background: $purple;
+
+    h2 {
+        color: $white;
+    }
+
+    .underline {
+        background: $white;
+    }
+
+    .card {
+        background: $white;
+        margin: 2.5rem;
+
+        .text-icon-container {
+            padding: 0;
+
+            .fa-play-circle {
+                margin: .5rem 1.4rem 1.9rem;
+            }
+        }
+    }
+
+}
