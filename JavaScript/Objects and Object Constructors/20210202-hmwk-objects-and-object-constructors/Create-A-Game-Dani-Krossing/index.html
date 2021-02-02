@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/player.js"></script>
+    <script src="./js/enemy.js"></script>
+    <script src="./js/game-manager.js"></script>
+</head>
+<body>
+
+    <div class="header">
+        <p>Play the greatest RPG ever to be made!</p>
+        <h2>Choose your character!</h2>
+    </div>
+
+    <div class="interface">
+        <a href="#" onclick="GameManager.setGameStart('Warrior')">
+            <img src="./images/warrior.jpg" alt="warrior">
+            <div>
+                <h3>Warrior</h3>
+                <p>Warriors have higher health and stamina, however their strength also makes them slower and clumsier.</p>
+            </div>
+        </a>
+        <a href="#" onclick="GameManager.setGameStart('Rogue')">
+            <img src="./images/rogue.jpg" alt="rogue">
+            <div>
+                <h3>Rogue</h3>
+                <p>Rogues are fast and have high stamina and sped which makes up for their lack in strength and health.</p>
+            </div>
+        </a>
+        <a href="#" onclick="GameManager.setGameStart('Mage')">
+            <img src="./images/mage.jpg" alt="mage">
+            <div>
+                <h3>Mage</h3>
+                <p>Mages are glass canons which puts all their efforts into spells. This means they slack on everything else.</p>
+            </div>
+        </a>
+        <a href="#" onclick="GameManager.setGameStart('Hunter')">
+            <img src="./images/hunter.jpg" alt="hunter">
+            <div>
+                <h3>Hunter</h3>
+                <p>Hunters are well rounded fighters that focus on evening out their skills. No strengths or weaknesses.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="actions">
+
+    </div>
+
+    <div class="arena">
+
+    </div>
+
+    <div class="enemy">
+
+    </div>
+    
+</body>
+</html>
