@@ -1,11 +1,14 @@
+// Object constructor
 function Account(fullName, IBAN, balance) {
     this.fullName = fullName;
     this.IBAN = IBAN;
     this.balance = balance;
 }
 
+// New instance
 const kostasMinaidis = new Account("Kostas Minaidis", "GR00010003", 0);
 
+// Prototypes
 Account.prototype.getBalance = function() {
     console.log(this.balance);
     return this.balance;
