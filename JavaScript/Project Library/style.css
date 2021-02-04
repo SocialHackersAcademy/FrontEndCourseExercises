@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("library.jpg");
+    backdrop-filter: blur(3px);
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    box-shadow: 0 0 5px 4px white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-image: url("library.jpg");
+    display: block;
+    margin-left: auto;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 500ms;
+    outline: none;
+    position: relative;
+    right: 1rem;
+    top: 1rem;
+}
+
+button:hover {
+    background-size: cover;
+    box-shadow: 0 0 7px 5px goldenrod;
+    cursor: pointer;
+}
+
+#form {
+    /* display: none; */
+    display: flex;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: .7rem;
+    padding: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: goldenrod;
+    font-weight: bold;
+}
