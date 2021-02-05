@@ -24,6 +24,7 @@ addBookToLibrary(trainspotting);
 const bookShelf = document.getElementById('book-shelf');
 const form = document.getElementById('form');
 const formButton = document.getElementById('form-button');
+const submitButton = document.getElementById('submit-button');
 
 let state = false;
 
@@ -32,9 +33,11 @@ function showHideForm() {
      if (state) {
           formButton.textContent = "CANCEL";
           form.style.top = "1rem";
+          submitButton.style.right = "1rem";
      } else {
           formButton.textContent = "NEW BOOK";
           form.style.top = "-15rem";
+          submitButton.style.right = "-10rem";
      }
 }
 
