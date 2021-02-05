@@ -57,7 +57,7 @@ body {
     position: absolute;
     top: -15rem;
     right: 11rem;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 2px solid goldenrod;
     box-shadow: 0 0 5px 4px goldenrod;
     transition: 500ms;
