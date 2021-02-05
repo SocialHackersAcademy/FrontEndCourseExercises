@@ -38,6 +38,48 @@ button:hover {
 #form {
     /* display: none; */
     display: flex;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 11rem;
+    border-radius: 5px;
+    border: 2px solid goldenrod;
+    box-shadow: 0 0 5px 4px goldenrod;
+}
+
+#label-wrapper {
+    font-weight: bold;
+    color: goldenrod;
+    letter-spacing: .1rem;
+    border-radius: 5px;
+}
+
+label {
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid goldenrod;
+    border-radius: 5px;
+    margin: .45rem 0 .45rem 0;
+    padding: .5rem .2rem .5rem .5rem;
+}
+
+input,
+select {
+    margin-top: .5rem;
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+    padding: .54rem .5rem;
+    outline: none;
+    border: none;
+    color: goldenrod;
+    border-bottom: 1px solid goldenrod;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+::placeholder {
+    color: goldenrod;
+    font-style: italic;
 }
 
 article {
