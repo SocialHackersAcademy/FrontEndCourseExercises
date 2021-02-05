@@ -23,10 +23,19 @@ addBookToLibrary(trainspotting);
 
 const bookShelf = document.getElementById('book-shelf');
 const form = document.getElementById('form');
-const button = document.getElementById('button');
+const formButton = document.getElementById('form-button');
 
-function showForm() {
-    form.style.display = "flex";
+let state = false;
+
+function showHideForm() {
+     state = !state;
+     if (state) {
+          formButton.textContent = "CANCEL";
+          form.style.top = "1rem";
+     } else {
+          formButton.textContent = "NEW BOOK";
+          form.style.top = "-15rem";
+     }
 }
 
-button.addEventListener('click', showForm);
+formButton.addEventListener('click', showHideForm);
