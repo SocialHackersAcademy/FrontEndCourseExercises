@@ -11,7 +11,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-button {
+#form-button {
     box-shadow: 0 0 5px 4px white;
     padding: 1rem;
     border: none;
@@ -27,25 +27,26 @@ button {
     position: relative;
     right: 1rem;
     top: 1rem;
+    width: 8.74rem;
 }
 
-button:hover {
+#form-button:hover {
     background-size: cover;
     box-shadow: 0 0 7px 5px goldenrod;
     cursor: pointer;
 }
 
 #form {
-    /* display: none; */
     display: flex;
     background: rgba(0, 0, 0, 0.8);
     padding: 1rem;
     position: absolute;
-    top: 1rem;
+    top: -15rem;
     right: 11rem;
     border-radius: 5px;
     border: 2px solid goldenrod;
     box-shadow: 0 0 5px 4px goldenrod;
+    transition: 500ms;
 }
 
 #label-wrapper {
