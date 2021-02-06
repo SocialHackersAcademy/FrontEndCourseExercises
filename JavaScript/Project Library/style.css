@@ -33,6 +33,7 @@ button {
     right: 1rem;
     width: 8.74rem;
     letter-spacing: .1rem;
+    z-index: 1;
 }
 
 #form-button {
@@ -58,12 +59,13 @@ button:hover {
     background: rgba(0, 0, 0, 0.8);
     padding: 1rem;
     position: absolute;
-    top: -15rem;
+    top: -16rem;
     right: 11rem;
     border-radius: 10px;
     border: 2px solid goldenrod;
     box-shadow: 0 0 5px 4px goldenrod;
     transition: 500ms;
+    z-index: 1;
 }
 
 #labels-wrapper {
@@ -112,7 +114,7 @@ select {
     grid-template-rows: auto;
     position: relative;
     top: -6rem;
-    left: 1rem;
+    padding: 0 1rem;
 }
 
 .book {
@@ -131,15 +133,15 @@ select {
     text-align: right;
 }
 
-.remove-btn,
-.status-btn {
+.remove-button,
+.status-button {
     width: 3.6rem;
     padding: .2rem;
     margin-top: .5rem;
     box-shadow: 0 0 5px white;
 }
 
-.remove-btn {
+.remove-button {
     margin-right: .8rem;
     background: rgb(255, 49, 49);
 }
