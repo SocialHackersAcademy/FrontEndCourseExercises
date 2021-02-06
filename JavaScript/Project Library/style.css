@@ -108,8 +108,11 @@ select {
 
 #bookcase {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     grid-template-rows: auto;
+    position: relative;
+    top: -6rem;
+    left: 1rem;
 }
 
 .book {
