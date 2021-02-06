@@ -66,21 +66,35 @@ const render = () => {
      author.setAttribute('class', 'author');
      author.textContent = `by ${myLibrary[0].author}`;
 
-     const removeBtn = document.createElement('button');
-     bookContainer.appendChild(removeBtn);
-     removeBtn.setAttribute('class', 'remove-btn')
-     removeBtn.textContent = "Remove";
+     const removeButton = document.createElement('button');
+     bookContainer.appendChild(removeButton);
+     removeButton.setAttribute('class', 'remove-button')
+     removeButton.textContent = "Remove";
 
-     const statusBtn = document.createElement('button');
-     bookContainer.appendChild(statusBtn);
-     statusBtn.setAttribute('class', 'status-btn')
-     statusBtn.textContent = "Unread";
+     const statusButton = document.createElement('button');
+     bookContainer.appendChild(statusButton);
+     statusButton.setAttribute('class', 'status-button')
+     statusButton.textContent = "Unread";
+
+     let state = false;
+     function readStatus() {
+          state = !state;
+          if (state) {
+               statusButton.textContent = "Read";
+               statusButton.style.background = "green";
+               statusButton.style.color = "white";
+          } else {
+               statusButton.textContent = "Unread";
+               statusButton.style.background = "rgb(255, 246, 204)";
+               statusButton.style.color = "black";
+          }
+     }
+     statusButton.addEventListener('click', readStatus);
 }
 
 render();
 
 let state = false;
-
 function showHideForm() {
      state = !state;
      if (state) {
@@ -89,9 +103,8 @@ function showHideForm() {
           submitButton.style.right = "1rem";
      } else {
           formButton.textContent = "NEW BOOK";
-          form.style.top = "-15rem";
+          form.style.top = "-16rem";
           submitButton.style.right = "-10rem";
      }
 }
-
 formButton.addEventListener('click', showHideForm);
