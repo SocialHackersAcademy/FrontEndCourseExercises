@@ -12,20 +12,23 @@ body {
     overflow-x: hidden;
 }
 
+button {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 500ms;
+}
+
 #form-button,
 #submit-button {
     box-shadow: 0 0 5px 4px white;
     padding: 1rem;
-    border: none;
-    border-radius: 5px;
     background-image: url("library.jpg");
     display: block;
     margin-left: auto;
     color: white;
     font-size: 1.2rem;
-    font-weight: bold;
-    transition: 500ms;
-    outline: none;
     position: relative;
     right: 1rem;
     width: 8.74rem;
@@ -44,7 +47,7 @@ body {
 }
 
 #form-button:hover,
-#submit-button:hover {
+button:hover {
     background-size: cover;
     box-shadow: 0 0 7px 5px goldenrod;
     cursor: pointer;
@@ -63,7 +66,7 @@ body {
     transition: 500ms;
 }
 
-#label-wrapper {
+#labels-wrapper {
     font-weight: bold;
     color: goldenrod;
     letter-spacing: .1rem;
@@ -97,9 +100,49 @@ select {
     font-style: italic;
 }
 
-article {
+#labels-wrapper,
+#inputs-wrapper {
     display: flex;
     flex-direction: column;
+}
+
+#bookcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: auto;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 8rem;
+    height: 8rem;
+    padding: .5rem;
+    font-weight: bold;
+    box-shadow: 2px 5px 10px black;
+}
+
+.author {
+    font-size: .7rem;
+    text-align: right;
+}
+
+.remove-btn,
+.status-btn {
+    width: 3.6rem;
+    padding: .2rem;
+    margin-top: .5rem;
+    box-shadow: 0 0 5px white;
+}
+
+.remove-btn {
+    margin-right: .8rem;
+    background: rgb(255, 49, 49);
+}
+
+.status-btn {
+    background: rgb(255, 246, 204);
 }
 
 footer {
