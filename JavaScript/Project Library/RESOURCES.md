@@ -31,3 +31,8 @@
     1. webdev simplified https://www.youtube.com/watch?v=GihQAC1I39Q&t=196s
     2. dcode https://www.youtube.com/watch?v=k8yJCeuP6I8
     3. {RhymBil} https://www.youtube.com/watch?v=2hJ1rTANVnk
+
+## Bugs
+1. Have to double click (not single click) READ button to change to UNREAD
+2. Similar to above bug, on submitting form, have to double click (not single click) NEW BOOK button to retrieve new form.
+3. Yet to complete local storage task.
