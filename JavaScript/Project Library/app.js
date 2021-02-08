@@ -55,8 +55,8 @@ const validateInput = () => {
 }
 
 const saveNewBookInMyLibrary = () => {
-     const newBookTitleValue = newBookTitle.value;
-     const newBookAuthorValue = newBookAuthor.value;
+     const newBookTitleValue = newBookTitle.value.trim();
+     const newBookAuthorValue = newBookAuthor.value.trim();
      const newBookPagesValue = newBookPages.value;
      const newBookStatusValue = newBookStatus.value;
 
