@@ -171,3 +171,27 @@ const slideInForm = () => {
      form.reset();
 }
 
+console.log(localStorage);
+console.log(Object.values(localStorage));
+console.log(Object.values(localStorage)[0]);
+console.log(Object.values(localStorage)[1]);
+console.log(Object.values(localStorage)[2]);
+console.log(Object.values(localStorage)[3]);
+console.log(Object.values(localStorage)[4]);
+console.log(Object.values(localStorage)[5]);
+console.log(Object.values(localStorage)[6]);
+console.log(Object.values(localStorage)[7]);
+console.log(Object.values(localStorage)[8]);
+console.log(Object.values(localStorage)[9]);
+console.log(Object.values(localStorage)[10]);
+console.log(Object.values(localStorage)[11]);
+console.log(Object.values(localStorage)[12]);
+console.log(Object.values(localStorage)[13]);
+console.log(Object.values(localStorage)[14]);
+console.log(Object.values(localStorage)[15]);
+
+// console.log(localStorage[Trainspotting - title]);
+
+// localStorage.forEach(item => {
+//      const key = 
+// })
