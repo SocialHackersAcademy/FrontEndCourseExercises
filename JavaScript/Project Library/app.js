@@ -28,6 +28,43 @@ const form = document.getElementById('form');
 const formButton = document.getElementById('form-button');
 const submitButton = document.getElementById('submit-button');
 const randomColor = Math.floor(Math.random()*16777215).toString(16);
+const newBookTitle = document.getElementById('title');
+const newBookAuthor = document.getElementById('author');
+const newBookPages = document.getElementById('pages');
+const newBookStatus = document.getElementById('status');
+
+const submitForm = (event) => {
+     event.preventDefault();
+     validateInput();
+     saveNewBookInMyLibrary();
+     event.target.reset(); // same as --> form.reset();
+     slideInForm();
+}
+form.addEventListener('submit', submitForm);
+
+const validateInput = () => {
+
+     const newBookPagesValue = newBookPages.value;
+
+     if (newBookPagesValue <= 0) {
+          newBookPages.setAttribute('class', 'error');
+          return alert('Please enter the correct number of pages!');
+     }
+     newBookPages.removeAttribute('class', 'error');
+     alert('New book submitted successfully!');
+}
+
+const saveNewBookInMyLibrary = () => {
+     const newBookTitleValue = newBookTitle.value;
+     const newBookAuthorValue = newBookAuthor.value;
+     const newBookPagesValue = newBookPages.value;
+     const newBookStatusValue = newBookStatus.value;
+
+     // order of parameters: Book(author, title, pages, read)
+     const newBookInstance = new Book(newBookAuthorValue, newBookTitleValue, newBookPagesValue, newBookStatusValue);
+     addBookToLibrary(newBookInstance);
+     console.log(myLibrary);
+}
 
 const render = () => {
 
@@ -62,7 +99,7 @@ const render = () => {
           statusButton.textContent = "Unread";
 
           let state = false;
-          function readStatus() {
+          const readStatus = () => {
                state = !state;
                if (state) {
                     statusButton.textContent = "Read";
@@ -77,20 +114,29 @@ const render = () => {
           statusButton.addEventListener('click', readStatus);
      });
 }
-
 render();
 
 let state = false;
-function showHideForm() {
+const showHideForm = () => {
      state = !state;
      if (state) {
-          formButton.textContent = "CANCEL";
-          form.style.top = "1rem";
-          submitButton.style.right = "1rem";
+          slideOutForm();
      } else {
-          formButton.textContent = "NEW BOOK";
-          form.style.top = "-16rem";
-          submitButton.style.right = "-10rem";
+          slideInForm();
      }
 }
 formButton.addEventListener('click', showHideForm);
+
+const slideOutForm = () => {
+     formButton.textContent = "CANCEL";
+     form.style.top = "1rem";
+     submitButton.style.right = "1rem";
+}
+
+const slideInForm = () => {
+     formButton.textContent = "NEW BOOK";
+     form.style.top = "-16rem";
+     submitButton.style.right = "-10rem";
+     newBookPages.removeAttribute('class', 'error');
+     form.reset();
+}
