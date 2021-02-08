@@ -128,7 +128,7 @@ select {
     flex-direction: column;
     justify-content: space-between;
     width: 8rem;
-    height: 8rem;
+    height: 9rem;
     padding: .5rem;
     font-weight: bold;
     box-shadow: 2px 5px 10px black;
@@ -146,9 +146,6 @@ select {
     color: black;
     text-shadow: 0 0 4px white;
     background: radial-gradient(goldenrod, transparent);
-    position: relative;
-    top: -5rem;
-    right: -5rem;
     box-shadow: 0 0 5px 1px white;
 }
 
