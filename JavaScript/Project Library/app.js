@@ -109,6 +109,12 @@ const render = () => {
           const removeBookItem = () => {
                const indexOfBookItem = myLibrary.indexOf(bookItem);
                myLibrary.splice(indexOfBookItem, 1);
+
+               localStorage.removeItem(`${bookItem.title} - title`);
+               localStorage.removeItem(`${bookItem.title} - author`);
+               localStorage.removeItem(`${bookItem.title} - pages`);
+               localStorage.removeItem(`${bookItem.title} - status`);
+
                render();
           }
           removeButton.addEventListener('click', removeBookItem);
