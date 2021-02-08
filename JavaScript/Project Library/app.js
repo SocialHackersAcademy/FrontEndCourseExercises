@@ -105,20 +105,24 @@ const render = () => {
 
           const statusButton = document.createElement('button');
           bookContainer.appendChild(statusButton);
-          statusButton.setAttribute('class', 'status-button')
+          statusButton.setAttribute('class', 'status-button');
           statusButton.textContent = bookItem.status;
+          if (statusButton.textContent === "Read") {
+               statusButton.setAttribute('class', 'status-button status-read');
+          }
+          if (statusButton.textContent === "Unread") {
+               statusButton.setAttribute('class', 'status-button status-unread');
+          }
 
           let state = false;
           const readStatus = () => {
                state = !state;
                if (state) {
                     statusButton.textContent = "Read";
-                    statusButton.style.background = "green";
-                    statusButton.style.color = "white";
+                    statusButton.setAttribute('class', 'status-button status-read');
                } else {
                     statusButton.textContent = "Unread";
-                    statusButton.style.background = "rgb(255, 246, 204)";
-                    statusButton.style.color = "black";
+                    statusButton.setAttribute('class', 'status-button status-unread');
                }
           }
           statusButton.addEventListener('click', readStatus);
