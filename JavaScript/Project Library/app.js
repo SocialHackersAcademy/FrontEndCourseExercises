@@ -1,11 +1,11 @@
 let myLibrary = [];
 
-function Book(author, title, pages, read) {
+function Book(author, title, pages, status) {
      // the constructor...
      this.author = author;
      this.title = title;
      this.pages = pages;
-     this.read = read;
+     this.status = status;
 }
 
 function addBookToLibrary(book) {
@@ -106,7 +106,7 @@ const render = () => {
           const statusButton = document.createElement('button');
           bookContainer.appendChild(statusButton);
           statusButton.setAttribute('class', 'status-button')
-          statusButton.textContent = "Unread";
+          statusButton.textContent = bookItem.status;
 
           let state = false;
           const readStatus = () => {
