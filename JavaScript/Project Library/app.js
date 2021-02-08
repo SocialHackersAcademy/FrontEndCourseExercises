@@ -39,6 +39,7 @@ const submitForm = (event) => {
      saveNewBookInMyLibrary();
      event.target.reset(); // same as --> form.reset();
      slideInForm();
+     render();
 }
 form.addEventListener('submit', submitForm);
 
@@ -63,10 +64,11 @@ const saveNewBookInMyLibrary = () => {
      // order of parameters: Book(author, title, pages, read)
      const newBookInstance = new Book(newBookAuthorValue, newBookTitleValue, newBookPagesValue, newBookStatusValue);
      addBookToLibrary(newBookInstance);
-     console.log(myLibrary);
 }
 
 const render = () => {
+
+     bookcase.innerHTML = "";
 
      myLibrary.forEach(bookItem => {
 
