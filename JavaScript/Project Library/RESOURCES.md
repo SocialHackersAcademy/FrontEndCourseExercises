@@ -26,3 +26,7 @@
     ``` javascript
     document.getElementById(elementID).innerHTML = "";
     ```
+8. Local and session storages
+    1. webdev simplified https://www.youtube.com/watch?v=GihQAC1I39Q&t=196s
+    2. dcode https://www.youtube.com/watch?v=k8yJCeuP6I8
+    3. {RhymBil} https://www.youtube.com/watch?v=2hJ1rTANVnk
