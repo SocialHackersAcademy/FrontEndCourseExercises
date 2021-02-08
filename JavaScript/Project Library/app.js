@@ -96,6 +96,13 @@ const render = () => {
           removeButton.setAttribute('class', 'remove-button')
           removeButton.textContent = "Remove";
 
+          const removeBookItem = () => {
+               const indexOfBookItem = myLibrary.indexOf(bookItem);
+               myLibrary.splice(indexOfBookItem, 1);
+               render();
+          }
+          removeButton.addEventListener('click', removeBookItem);
+
           const statusButton = document.createElement('button');
           bookContainer.appendChild(statusButton);
           statusButton.setAttribute('class', 'status-button')
