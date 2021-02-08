@@ -152,8 +152,14 @@ select {
     background: rgb(255, 49, 49);
 }
 
-.status-btn {
+.status-unread {
     background: rgb(255, 246, 204);
+    color: black;
+}
+
+.status-read {
+    background: green;
+    color: white;
 }
 
 footer {
