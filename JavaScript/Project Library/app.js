@@ -27,7 +27,6 @@ const bookcase = document.getElementById('bookcase');
 const form = document.getElementById('form');
 const formButton = document.getElementById('form-button');
 const submitButton = document.getElementById('submit-button');
-const randomColor = Math.floor(Math.random()*16777215).toString(16);
 const newBookTitle = document.getElementById('title');
 const newBookAuthor = document.getElementById('author');
 const newBookPages = document.getElementById('pages');
@@ -72,6 +71,8 @@ const render = () => {
 
      myLibrary.forEach(bookItem => {
 
+          const randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+
           const bookContainer = document.createElement('article');
           bookcase.appendChild(bookContainer);
           bookcase.style.margin = '.5rem 1rem';
@@ -79,7 +80,7 @@ const render = () => {
           const book = document.createElement('div');
           bookContainer.appendChild(book);
           book.setAttribute('class', 'book');
-          book.style.background = `#${randomColor}`;
+          book.style.background = randomColor;
 
           const title = document.createElement('p');
           book.appendChild(title);
