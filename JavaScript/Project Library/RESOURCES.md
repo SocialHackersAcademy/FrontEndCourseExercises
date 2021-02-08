@@ -2,7 +2,8 @@
 1. toggle button https://stackoverflow.com/questions/3047755/i-am-trying-to-make-a-simple-toggle-button-in-javascript
 2. random hex color https://css-tricks.com/snippets/javascript/random-hex-color/
 3. button outside the form https://stackoverflow.com/questions/7020659/submit-form-using-a-button-outside-the-form-tag/12567605
-    1. ```javascript
+    1. 
+    ```html
     <form method="get" id="form1" action="something.php">
 
     </form>
