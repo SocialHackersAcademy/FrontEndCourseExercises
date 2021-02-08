@@ -68,6 +68,7 @@ const saveNewBookInMyLibrary = () => {
 const render = () => {
 
      bookcase.innerHTML = "";
+     localStorage.getItem('library');
 
      myLibrary.forEach(bookItem => {
 
@@ -85,6 +86,11 @@ const render = () => {
           const title = document.createElement('p');
           book.appendChild(title);
           title.textContent = bookItem.title;
+
+          const pages = document.createElement('p');
+          book.appendChild(pages);
+          pages.setAttribute('class', 'pages');
+          pages.innerHTML = `${bookItem.pages}<br>pages`;
 
           const author = document.createElement('p');
           book.appendChild(author);
@@ -126,6 +132,8 @@ const render = () => {
                }
           }
           statusButton.addEventListener('click', readStatus);
+
+          localStorage.setItem(`book${bookItem.title}`, bookItem.title);
      });
 }
 render();
@@ -154,3 +162,4 @@ const slideInForm = () => {
      newBookPages.removeAttribute('class', 'error');
      form.reset();
 }
+
