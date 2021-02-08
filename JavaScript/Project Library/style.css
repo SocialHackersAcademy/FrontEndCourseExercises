@@ -6,8 +6,8 @@
 
 body {
     background-image: url("library.jpg");
+    background-attachment: fixed;
     backdrop-filter: blur(3px);
-    height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
@@ -75,6 +75,12 @@ button:hover {
     border-radius: 5px;
 }
 
+#labels-wrapper,
+#inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 label {
     background: rgba(0, 0, 0, 0.7);
     border-bottom: 1px solid goldenrod;
@@ -97,24 +103,24 @@ select {
     background: rgba(0, 0, 0, 0.7);
 }
 
+.error {
+    border: 1px solid rgb(255, 49, 49);
+}
+
 ::placeholder {
     color: goldenrod;
     font-style: italic;
 }
 
-#labels-wrapper,
-#inputs-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
 #bookcase {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     grid-template-rows: auto;
+    row-gap: 4rem;
     position: relative;
     top: -6rem;
-    padding: 0 1rem;
+    padding: 0 10rem 2rem 10rem;
+    min-height: 100vh;
 }
 
 .book {
@@ -153,12 +159,11 @@ select {
 footer {
     background: rgba(0, 0, 0, 0.5);
     color: white;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     text-align: center;
     font-size: .7rem;
     padding: 1rem;
+    margin-bottom: -.5rem;
 }
 
 footer a {
