@@ -68,7 +68,6 @@ const saveNewBookInMyLibrary = () => {
 const render = () => {
 
      bookcase.innerHTML = "";
-     localStorage.getItem('library');
 
      myLibrary.forEach(bookItem => {
 
@@ -96,6 +95,11 @@ const render = () => {
           book.appendChild(author);
           author.setAttribute('class', 'author');
           author.textContent = `by ${bookItem.author}`;
+
+          localStorage.setItem(`${bookItem.title} - title`, bookItem.title);
+          localStorage.setItem(`${bookItem.title} - author`, bookItem.author);
+          localStorage.setItem(`${bookItem.title} - pages`, bookItem.pages);
+          localStorage.setItem(`${bookItem.title} - status`, bookItem.status);
 
           const removeButton = document.createElement('button');
           bookContainer.appendChild(removeButton);
@@ -132,8 +136,6 @@ const render = () => {
                }
           }
           statusButton.addEventListener('click', readStatus);
-
-          localStorage.setItem(`book${bookItem.title}`, bookItem.title);
      });
 }
 render();
