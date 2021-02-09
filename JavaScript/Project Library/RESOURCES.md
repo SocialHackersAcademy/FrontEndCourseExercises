@@ -42,10 +42,6 @@
         ```
     7. John Desrosiers: Saving Arrays and Object in Local Storage https://www.youtube.com/watch?v=2IHiO90LUEI
 
-## Bugs
-1. Have to double click (not single click) READ button to change to UNREAD
-2. Similar to above bug, on submitting form, have to double click (not single click) NEW BOOK button to retrieve new form.
-
 ## TEST
 ```javascript
 const theElephantTree = new Book("R.D. Ronald", "The Elephant Tree", 250, "Read");
