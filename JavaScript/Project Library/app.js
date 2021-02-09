@@ -120,12 +120,15 @@ const render = () => {
           const readStatus = () => {
                state = !state;
                if (state) {
+                    bookItem.status = "Read";
                     statusButton.textContent = "Read";
                     statusButton.setAttribute('class', 'status-button status-read');
                } else {
+                    bookItem.status = "Unread";
                     statusButton.textContent = "Unread";
                     statusButton.setAttribute('class', 'status-button status-unread');
                }
+               localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
           }
           statusButton.addEventListener('click', readStatus);
      });

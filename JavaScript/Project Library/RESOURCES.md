@@ -45,7 +45,6 @@
 ## Bugs
 1. Have to double click (not single click) READ button to change to UNREAD
 2. Similar to above bug, on submitting form, have to double click (not single click) NEW BOOK button to retrieve new form.
-3. Read status not updated in local storage on change.
 
 ## TEST
 ```javascript
