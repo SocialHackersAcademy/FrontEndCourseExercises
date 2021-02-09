@@ -41,6 +41,9 @@
         });
         ```
     7. John Desrosiers: Saving Arrays and Object in Local Storage https://www.youtube.com/watch?v=2IHiO90LUEI
+9. overflow
+    1. html https://stackoverflow.com/questions/24193272/overflow-xhidden-on-mobile-device-not-working
+    2. @media https://www.codeproject.com/Questions/989229/overflow-x-hidden-is-not-working-in-mobile
 
 ## TEST
 ```javascript
