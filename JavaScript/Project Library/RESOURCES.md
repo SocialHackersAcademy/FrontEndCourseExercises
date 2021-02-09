@@ -33,8 +33,16 @@
     3. {RhymBil} https://www.youtube.com/watch?v=2hJ1rTANVnk
     4. Kostas @1hr https://www.youtube.com/watch?v=Knv45ECYko4&list=PL0rtm5y5VwgvP69_dNDPxP_ql9IG2iMxn&index=58
     5. store an object https://coderwall.com/p/ewxn9g/storing-and-retrieving-objects-with-localstorage-html5
+    6. https://stackoverflow.com/questions/3138564/looping-through-localstorage-in-html5-and-javascript#:~:text=localStorage%20is%20an%20Object%20.,just%20like%20any%20other%20Object.
+        1. 
+        ```javascript
+        Object.keys(localStorage).forEach(function(key){
+            console.log(localStorage.getItem(key));
+        });
+        ```
+    7. John Desrosiers: Saving Arrays and Object in Local Storage https://www.youtube.com/watch?v=2IHiO90LUEI
 
 ## Bugs
 1. Have to double click (not single click) READ button to change to UNREAD
 2. Similar to above bug, on submitting form, have to double click (not single click) NEW BOOK button to retrieve new form.
-3. Yet to complete local storage task.
+3. Read status not updated in local storage on change.
