@@ -96,10 +96,7 @@ const render = () => {
           author.setAttribute('class', 'author');
           author.textContent = `by ${bookItem.author}`;
 
-          localStorage.setItem(`${bookItem.title} - title`, bookItem.title);
-          localStorage.setItem(`${bookItem.title} - author`, bookItem.author);
-          localStorage.setItem(`${bookItem.title} - pages`, bookItem.pages);
-          localStorage.setItem(`${bookItem.title} - status`, bookItem.status);
+          localStorage.setItem(`${bookItem.title}`, JSON.stringify(bookItem));
 
           const removeButton = document.createElement('button');
           bookContainer.appendChild(removeButton);
@@ -109,12 +106,7 @@ const render = () => {
           const removeBookItem = () => {
                const indexOfBookItem = myLibrary.indexOf(bookItem);
                myLibrary.splice(indexOfBookItem, 1);
-
-               localStorage.removeItem(`${bookItem.title} - title`);
-               localStorage.removeItem(`${bookItem.title} - author`);
-               localStorage.removeItem(`${bookItem.title} - pages`);
-               localStorage.removeItem(`${bookItem.title} - status`);
-
+               localStorage.removeItem(`${bookItem.title}`);
                render();
           }
           removeButton.addEventListener('click', removeBookItem);
