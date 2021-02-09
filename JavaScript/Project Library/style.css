@@ -4,12 +4,16 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-image: url("library.jpg");
     background-attachment: fixed;
     backdrop-filter: blur(3px);
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 button {
