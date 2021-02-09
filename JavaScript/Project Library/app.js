@@ -19,18 +19,6 @@ function addBookToLibrary(book) {
      localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
 }
 
-/* TEST
-const theElephantTree = new Book("R.D. Ronald", "The Elephant Tree", 250, "Read");
-const requiemForADream = new Book("Hubert Selby Jr.", "Requiem for a Dream", 310, "Read");
-const trainspotting = new Book("Irvine Welsh", "Trainspotting", 480, "Unread");
-const titanic = new Book("Ed W. Marsh", "James Cameron's Titanic", 300, "Unread");
-
-addBookToLibrary(theElephantTree);
-addBookToLibrary(requiemForADream);
-addBookToLibrary(trainspotting);
-addBookToLibrary(titanic);
-*/
-
 const bookcase = document.getElementById('bookcase');
 const form = document.getElementById('form');
 const formButton = document.getElementById('form-button');

@@ -46,3 +46,16 @@
 1. Have to double click (not single click) READ button to change to UNREAD
 2. Similar to above bug, on submitting form, have to double click (not single click) NEW BOOK button to retrieve new form.
 3. Read status not updated in local storage on change.
+
+## TEST
+```javascript
+const theElephantTree = new Book("R.D. Ronald", "The Elephant Tree", 250, "Read");
+const requiemForADream = new Book("Hubert Selby Jr.", "Requiem for a Dream", 310, "Read");
+const trainspotting = new Book("Irvine Welsh", "Trainspotting", 480, "Unread");
+const titanic = new Book("Ed W. Marsh", "James Cameron's Titanic", 300, "Unread");
+
+addBookToLibrary(theElephantTree);
+addBookToLibrary(requiemForADream);
+addBookToLibrary(trainspotting);
+addBookToLibrary(titanic);
+```
