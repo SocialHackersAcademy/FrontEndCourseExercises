@@ -1,4 +1,9 @@
-let myLibrary = [];
+if (localStorage.length > 0) {
+     myLibrary = JSON.parse(localStorage.getItem('myLibrary'));
+}
+if (localStorage.length === 0) {
+     myLibrary = [];
+}
 
 function Book(author, title, pages, status) {
      // the constructor...
@@ -10,9 +15,11 @@ function Book(author, title, pages, status) {
 
 function addBookToLibrary(book) {
      // do stuff here
-     return myLibrary.push(book);
+     myLibrary.push(book);
+     localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
 }
 
+/* TEST
 const theElephantTree = new Book("R.D. Ronald", "The Elephant Tree", 250, "Read");
 const requiemForADream = new Book("Hubert Selby Jr.", "Requiem for a Dream", 310, "Read");
 const trainspotting = new Book("Irvine Welsh", "Trainspotting", 480, "Unread");
@@ -22,6 +29,7 @@ addBookToLibrary(theElephantTree);
 addBookToLibrary(requiemForADream);
 addBookToLibrary(trainspotting);
 addBookToLibrary(titanic);
+*/
 
 const bookcase = document.getElementById('bookcase');
 const form = document.getElementById('form');
@@ -96,8 +104,6 @@ const render = () => {
           author.setAttribute('class', 'author');
           author.textContent = `by ${bookItem.author}`;
 
-          localStorage.setItem(`${bookItem.title}`, JSON.stringify(bookItem));
-
           const removeButton = document.createElement('button');
           bookContainer.appendChild(removeButton);
           removeButton.setAttribute('class', 'remove-button')
@@ -106,7 +112,7 @@ const render = () => {
           const removeBookItem = () => {
                const indexOfBookItem = myLibrary.indexOf(bookItem);
                myLibrary.splice(indexOfBookItem, 1);
-               localStorage.removeItem(`${bookItem.title}`);
+               localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
                render();
           }
           removeButton.addEventListener('click', removeBookItem);
@@ -162,28 +168,3 @@ const slideInForm = () => {
      newBookPages.removeAttribute('class', 'error');
      form.reset();
 }
-
-console.log(localStorage);
-console.log(Object.values(localStorage));
-console.log(Object.values(localStorage)[0]);
-console.log(Object.values(localStorage)[1]);
-console.log(Object.values(localStorage)[2]);
-console.log(Object.values(localStorage)[3]);
-console.log(Object.values(localStorage)[4]);
-console.log(Object.values(localStorage)[5]);
-console.log(Object.values(localStorage)[6]);
-console.log(Object.values(localStorage)[7]);
-console.log(Object.values(localStorage)[8]);
-console.log(Object.values(localStorage)[9]);
-console.log(Object.values(localStorage)[10]);
-console.log(Object.values(localStorage)[11]);
-console.log(Object.values(localStorage)[12]);
-console.log(Object.values(localStorage)[13]);
-console.log(Object.values(localStorage)[14]);
-console.log(Object.values(localStorage)[15]);
-
-// console.log(localStorage[Trainspotting - title]);
-
-// localStorage.forEach(item => {
-//      const key = 
-// })
