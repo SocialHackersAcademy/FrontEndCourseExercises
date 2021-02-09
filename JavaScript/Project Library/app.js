@@ -116,10 +116,8 @@ const render = () => {
                statusButton.setAttribute('class', 'status-button status-unread');
           }
 
-          let state = false;
           const readStatus = () => {
-               state = !state;
-               if (state) {
+               if (bookItem.status === "Unread") {
                     bookItem.status = "Read";
                     statusButton.textContent = "Read";
                     statusButton.setAttribute('class', 'status-button status-read');
@@ -135,10 +133,8 @@ const render = () => {
 }
 render();
 
-let state = false;
 const showHideForm = () => {
-     state = !state;
-     if (state) {
+     if (formButton.textContent === "NEW BOOK") {
           slideOutForm();
      } else {
           slideInForm();
