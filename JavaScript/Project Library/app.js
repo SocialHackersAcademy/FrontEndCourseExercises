@@ -47,7 +47,7 @@ const validateInput = () => {
           return alert('Please enter the correct number of pages!');
      }
      newBookPages.removeAttribute('class', 'error');
-     alert('New book submitted successfully!');
+     alert('New book submitted successfully and stored locally!');
 }
 
 const saveNewBookInMyLibrary = () => {
