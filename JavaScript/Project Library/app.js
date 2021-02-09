@@ -143,8 +143,17 @@ const showHideForm = () => {
 formButton.addEventListener('click', showHideForm);
 
 const slideOutForm = () => {
+     if (screen.width <= 500) {
+          form.style.top = "7rem";
+          form.style.right = "1rem";
+          submitButton.style.top = "19rem";
+     }
+     if (screen.width > 500) {
+          form.style.top = "1rem";
+          form.style.right = "11rem";
+          submitButton.style.top = "7.7rem";
+     }
      formButton.textContent = "CANCEL";
-     form.style.top = "1rem";
      submitButton.style.right = "1rem";
 }
 
