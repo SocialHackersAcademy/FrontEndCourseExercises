@@ -5,16 +5,29 @@ if (localStorage.length === 0) {
      myLibrary = [];
 }
 
-function Book(author, title, pages, status) {
-     // the constructor...
-     this.author = author;
-     this.title = title;
-     this.pages = pages;
-     this.status = status;
+class Library {
+     constructor(localStorage) {
+          this.localStorage = localStorage;
+     }
+
+     get localStorage() {
+          return this.loadLocalStorage();
+     }
+     loadLocalStorage() {
+          return JSON.parse(localStorage.getItem('myLibrary'));
+     }
 }
 
-function addBookToLibrary(book) {
-     // do stuff here
+class Book {
+     constructor(author, title, pages, status) {
+          this.author = author;
+          this.title = title;
+          this.pages = pages;
+          this.status = status;
+     }
+}
+
+const addBookToLibrary = (book) => {
      myLibrary.push(book);
      localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
 }
@@ -36,11 +49,10 @@ const submitForm = (event) => {
      slideInForm();
      render();
 }
-form.addEventListener('submit', submitForm);
 
 const validateInput = () => {
 
-     const newBookPagesValue = newBookPages.value;
+     const newBookPagesValue = Number(newBookPages.value) + 0; // prevents numbers with 0 in front e.g. 009 pages
 
      if (newBookPagesValue <= 0) {
           newBookPages.setAttribute('class', 'error');
@@ -53,12 +65,16 @@ const validateInput = () => {
 const saveNewBookInMyLibrary = () => {
      const newBookTitleValue = newBookTitle.value.trim();
      const newBookAuthorValue = newBookAuthor.value.trim();
-     const newBookPagesValue = newBookPages.value;
+     const newBookPagesValue = Number(newBookPages.value) + 0; // prevents numbers with 0 in front e.g. 009 pages
      const newBookStatusValue = newBookStatus.value;
 
      // order of parameters: Book(author, title, pages, read)
      const newBookInstance = new Book(newBookAuthorValue, newBookTitleValue, newBookPagesValue, newBookStatusValue);
      addBookToLibrary(newBookInstance);
+}
+
+const getRandomColor = () => {
+     return `#${Math.floor(Math.random()*16777215).toString(16)}`;
 }
 
 const render = () => {
@@ -67,8 +83,6 @@ const render = () => {
 
      myLibrary.forEach(bookItem => {
 
-          const randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
-
           const bookContainer = document.createElement('article');
           bookcase.appendChild(bookContainer);
           bookcase.style.margin = '.5rem 1rem';
@@ -76,7 +90,7 @@ const render = () => {
           const book = document.createElement('div');
           bookContainer.appendChild(book);
           book.setAttribute('class', 'book');
-          book.style.background = randomColor;
+          book.style.background = getRandomColor();
 
           const title = document.createElement('p');
           book.appendChild(title);
@@ -131,7 +145,6 @@ const render = () => {
           statusButton.addEventListener('click', readStatus);
      });
 }
-render();
 
 const showHideForm = () => {
      if (formButton.textContent === "NEW BOOK") {
@@ -140,7 +153,6 @@ const showHideForm = () => {
           slideInForm();
      }
 }
-formButton.addEventListener('click', showHideForm);
 
 const slideOutForm = () => {
      if (screen.width <= 500) {
@@ -164,3 +176,8 @@ const slideInForm = () => {
      newBookPages.removeAttribute('class', 'error');
      form.reset();
 }
+
+form.addEventListener('submit', submitForm);
+formButton.addEventListener('click', showHideForm);
+
+render();
