@@ -5,6 +5,7 @@ if (localStorage.length === 0) {
      myLibrary = [];
 }
 
+/* draft code to use constructor for localStorage
 class Library {
      constructor(localStorage) {
           this.localStorage = localStorage;
@@ -17,6 +18,7 @@ class Library {
           return JSON.parse(localStorage.getItem('myLibrary'));
      }
 }
+*/
 
 class Book {
      constructor(author, title, pages, status) {
