@@ -44,6 +44,29 @@
 9. overflow
     1. html https://stackoverflow.com/questions/24193272/overflow-xhidden-on-mobile-device-not-working
     2. @media https://www.codeproject.com/Questions/989229/overflow-x-hidden-is-not-working-in-mobile
+10. new way to declare constructors https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+    ```javascript
+    // old method of declaring a function
+    function Book(author, title, pages, status) {
+        this.author = author;
+        this.title = title;
+        this.pages = pages;
+        this.status = status;
+    }
+    ```
+    ```javascript
+    class Book {
+        constructor(author, title, pages, status) {
+            this.author = author;
+            this.title = title;
+            this.pages = pages;
+            this.status = status;
+        }
+    }
+    ```
+11. extend, super
+    1. Traversy Media https://www.youtube.com/watch?v=RBLIm5LMrmc
+    2. dcode https://www.youtube.com/watch?v=fQ1oNTRdByA
 
 ## TEST
 ```javascript
