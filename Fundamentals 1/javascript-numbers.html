@@ -1,224 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Landing Page</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="dns-prefetch" href="//fonts.googleapis.com">
-        <link href="//fonts.googleapis.com/css?family=Merriweather|Montserrat:400,700|Dancing+Script:400,700" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-        <style>
-            .open {
-                background-color: limegreen !important;
-            }
-            
-            * {
-                box-sizing: border-box;
-            }
-            
-            a {
-                text-decoration: none;
-                transition: all .3s ease;
-            }
-            
-            body {
-                font-family: "Merriweather", serif;
-                font-size: 16px;
-                line-height: 1.5;
-            }
-            
-            .header {
-                text-align: center;
-                position: relative;
-                height: auto;
-                padding-bottom: 80px;
-                background: #4f2f60;
-                background-size: cover;
-                color: #fff;
-                overflow: hidden;
-            }
-            
-            .header h1 {
-                margin: 50px 0 20px;
-                font-family: "Montserrat", sans-serif;
-                font-size: 35px;
-            }
-            
-            .header h1 span {
-                font: 700 60px/1 "Dancing Script", cursive;
-                display: block;
-            }
-            
-            .header h2 {
-                margin-left: auto;
-                margin-right: auto;
-                font-size: 1em;
-                font-weight: 400;
-                padding: 20px;
-            }
-            
-            @media only screen and (min-width: 37.5em) {
-                .header h1 {
-                    font-size: 50px;
-                }
-                .header h1 span {
-                    font-size: 76px;
-                }
-                .header h2 {
-                    width: 76%;
-                    font-size: 18px;
-                }
-            }
-            
-            .wrapper {
-                margin: 0 auto;
-                width: 96%;
-                max-width: 1120px;
-            }
-            
-            .section {
-                padding: 60px 0;
-            }
-            
-            .section__title {
-                font-size: 24px;
-                color: #3b3b58;
-                text-align: center;
-                font-family: "Montserrat", sans-serif;
-                margin: 14px 0;
-            }
-            
-            .section__intro {
-                display: block;
-                text-align: center;
-                margin: 0 5% 30px;
-            }
-            
-            @media only screen and (min-width: 43.75em) {
-                .section__intro {
-                    margin-left: 15%;
-                    margin-right: 15%;
-                }
-            }
-            
-            .section--cta {
-                color: #454545;
-                background: #f1f1f1;
-            }
-            
-            .box {
-                display: flex;
-                flex: 1 0 100%;
-                margin-bottom: 20px;
-                background: #f9f9f9;
-            }
-            
-            .box__grid {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-            
-            .box__title {
-                font-family: "Montserrat", sans-serif;
-            }
-            
-            .box__more {
-                color: #ff4e5c;
-            }
-            
-            .box__content {
-                color: #454545;
-                text-align: center;
-                padding: 20px;
-            }
-            
-            .box__content>i {
-                color: #3b3b58;
-            }
-            
-            .box__content:hover .box__more {
-                color: #ff3545;
-            }
-            
-            .box__content:hover .box__more i {
-                padding-left: 4px;
-                transition: all .2s ease-in-out;
-            }
-            
-            @media only screen and (min-width: 43.75em) {
-                .box {
-                    flex: 0 0 30%;
-                }
-            }
-            
-            .btn {
-                color: #fff;
-                font-family: "Montserrat", sans-serif;
-                text-align: center;
-                display: block;
-                margin: 0 auto;
-                max-width: 300px;
-                padding: 12px 18px;
-                border-radius: 100px;
-                background: #ff4e5c;
-            }
-            
-            .btn:hover {
-                background: #ff3545;
-            }
-            
-            .footer {
-                color: #fff;
-                text-align: center;
-                padding: 10px 0;
-                background: #3b3b58;
-            }
-            
-            .footer p {
-                opacity: .65;
-            }
-        </style>
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link
+      href="//fonts.googleapis.com/css?family=Merriweather|Montserrat:400,700|Dancing+Script:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
 
-        <div class="header">
-            <h1><span>Social Hackers</span>Company</h1>
-            <h2>We are a competitive firm with over 15 years of experience in the field of computer generated probabilistic maintenance hybrid datasets.</h2>
-        </div>
+    <style>
+      .open {
+        background-color: limegreen !important;
+      }
 
-        <section class="section">
-            <div class="wrapper">
-                <h2 class="section__title">Software is our Passion</h2>
-                <p class="section__intro">
-                    Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor.
+      * {
+        box-sizing: border-box;
+      }
 
+      a {
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
 
-                </p>
-                <div class="box__grid">
-                    <article class="box"><a class="box__content" href="#"><i class="fa fa-lightbulb-o fa-3x"></i>
-            <h3 class="box__title">Website Design</h3>
-            <p>Duis neque leo cursus ac libero ac imperdiet bibendum nisl mauris neque diam vulputate nem.</p><span class="box__more">Special offer 25% off: &euro; 500</span></a></article>
-                    <article class="box"><a class="box__content" href="#"><i class="fa fa-code fa-3x"></i>
-            <h3 class="box__title">Software Applications</h3>
-            <p>Duis neque leo cursus ac libero ac imperdiet bibendum nisl mauris neque diam vulputate nem.</p><span class="box__more">Special offer 25% off: &euro; 400</span></a></article>
-                    <article class="box"><a class="box__content" href="#"><i class="fa fa-mobile fa-3x"></i>
-            <h3 class="box__title">Mobile Applications</h3>
-            <p>Duis neque leo cursus ac libero ac imperdiet bibendum nisl mauris neque diam vulputate nem.</p><span class="box__more">Special offer 25% off: &euro; 350</span></a></article>
-                </div>
-            </div>
-        </section>
+      body {
+        font-family: "Merriweather", serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
 
-        <div class="section section--cta">
-            <div class="wrapper">
-                <h2 class="section__title">Full package</h2>
-                <p class="section__intro">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor.</p><a class="btn" href="#">Special offer 25% off: &euro;1250</a>
-            </div>
-        </div>
-        <div class="footer">
-            <p>&copy; 2005 ~ 2020 Landing Page</p>
-        </div>
+      .header {
+        text-align: center;
+        position: relative;
+        height: auto;
+        padding-bottom: 80px;
+        background: #4f2f60;
+        background-size: cover;
+        color: #fff;
+        overflow: hidden;
+      }
 
-    </body>
+      .header h1 {
+        margin: 50px 0 20px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 35px;
+      }
+
+      .header h1 span {
+        font: 700 60px/1 "Dancing Script", cursive;
+        display: block;
+      }
+
+      .header h2 {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1em;
+        font-weight: 400;
+        padding: 20px;
+      }
+
+      @media only screen and (min-width: 37.5em) {
+        .header h1 {
+          font-size: 50px;
+        }
+        .header h1 span {
+          font-size: 76px;
+        }
+        .header h2 {
+          width: 76%;
+          font-size: 18px;
+        }
+      }
+
+      .wrapper {
+        margin: 0 auto;
+        width: 96%;
+        max-width: 1120px;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .section__title {
+        font-size: 24px;
+        color: #3b3b58;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        margin: 14px 0;
+      }
+
+      .section__intro {
+        display: block;
+        text-align: center;
+        margin: 0 5% 30px;
+      }
+
+      @media only screen and (min-width: 43.75em) {
+        .section__intro {
+          margin-left: 15%;
+          margin-right: 15%;
+        }
+      }
+
+      .section--cta {
+        color: #454545;
+        background: #f1f1f1;
+      }
+
+      .box {
+        display: flex;
+        flex: 1 0 100%;
+        margin-bottom: 20px;
+        background: #f9f9f9;
+      }
+
+      .box__grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .box__title {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .box__more {
+        color: #ff4e5c;
+      }
+
+      .box__content {
+        color: #454545;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .box__content > i {
+        color: #3b3b58;
+      }
+
+      .box__content:hover .box__more {
+        color: #ff3545;
+      }
+
+      .box__content:hover .box__more i {
+        padding-left: 4px;
+        transition: all 0.2s ease-in-out;
+      }
+
+      @media only screen and (min-width: 43.75em) {
+        .box {
+          flex: 0 0 30%;
+        }
+      }
+
+      .btn {
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        max-width: 300px;
+        padding: 12px 18px;
+        border-radius: 100px;
+        background: #ff4e5c;
+      }
+
+      .btn:hover {
+        background: #ff3545;
+      }
+
+      .footer {
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        background: #3b3b58;
+      }
+
+      .footer p {
+        opacity: 0.65;
+      }
+    </style></head
+  >+
+  <body>
+    <header class="header">
+      <h1><span>Social Hackers</span>Company</h1>
+      <h2>
+        We are a competitive firm with over <span id="experience"></span> years
+        of experience in the field of computer generated probabilistic
+        maintenance hybrid datasets.
+      </h2>
+    </header>
+
+    <main class="section">
+      <section class="wrapper">
+        <h2 class="section__title">Software is our Passion</h2>
+        <p class="section__intro">
+          Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas
+          faucibus mollis interdum. Curabitur blandit tempus porttitor.
+        </p>
+        <article class="box__grid">
+          <article class="box">
+            <a class="box__content" href="#"
+              ><i class="fa fa-lightbulb-o fa-3x"></i>
+              <h3 class="box__title">Website Design</h3>
+              <p>
+                Duis neque leo cursus ac libero ac imperdiet bibendum nisl
+                mauris neque diam vulputate nem.
+              </p>
+              <span class="box__more">
+                Special offer 25% off: &euro;
+                <span id="totalPrice"></span></span
+            ></a>
+          </article>
+          <article class="box">
+            <a class="box__content" href="#"
+              ><i class="fa fa-code fa-3x"></i>
+              <h3 class="box__title">Software Applications</h3>
+              <p>
+                Duis neque leo cursus ac libero ac imperdiet bibendum nisl
+                mauris neque diam vulputate nem.
+              </p>
+              <article class="box__more"></article>
+                Special offer 25% off: &euro;
+                <span id="priceSoftApp"></span></span
+            ></a>
+          </article>
+          <article class="box">
+            <a class="box__content" href="#"
+              ><i class="fa fa-mobile fa-3x"></i>
+              <h3 class="box__title">Mobile Applications</h3>
+              <p>
+                Duis neque leo cursus ac libero ac imperdiet bibendum nisl
+                mauris neque diam vulputate nem.
+              </p>
+              <span class="box__more"
+                >Special offer <span id="mobOffer"></span>% off: &euro; <span id="priceMobApp"></span></span
+              ></a
+            >
+          </article>
+        </article>
+      </section>
+    </main>
+
+    <section class="section section--cta">
+      <article class="wrapper">
+        <h2 class="section__title">Full package</h2>
+        <p class="section__intro">
+          Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas
+          faucibus mollis interdum. Curabitur blandit tempus porttitor.
+        </p>
+        <a class="btn" href="#">Special offer <span id="packageDiscount"></span>% off: &euro;<span id="fullPackage"></span></a>
+      </article>
+    </section>
+    <footer class="footer">
+      <p>&copy; 2005 ~ <span id="currentYear"></span> Landing Page</p>
+    </footer> 
+    <script src="app.js"></script>
+  </body>
 </html>
