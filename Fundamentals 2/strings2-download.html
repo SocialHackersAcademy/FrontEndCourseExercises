@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Strings: Task 2</title>
     <style>
       p {
@@ -17,32 +17,28 @@
   </head>
 
   <body>
-
-    <section class="preview">
-
-
-
-    </section>
-
+    <section class="preview"></section>
   </body>
   <script>
-    let quote = 'I do not like green eggs and ham. I do not like them, Sam-I-Am.';
-    let substring = 'green eggs and ham';
+    let quote =
+      "I do not like green eggs and ham. I do not like them, Sam-I-Am.";
+    let substring = "green eggs and ham";
 
     // Add your code here
-
+    let quoteLength = quote.length;
+    let index = quote.indexOf(substring);
+    let revisedQuote = quote.slice(0, index) + substring + ".";
     // Don't edit the code below here!
 
-    const section = document.querySelector('section');
+    const section = document.querySelector("section");
 
-    section.innerHTML = ' ';
-    let para1 = document.createElement('p');
-    para1.textContent = `The quote is ${ quoteLength } characters long.`;
-    let para2 = document.createElement('p');
+    section.innerHTML = " ";
+    let para1 = document.createElement("p");
+    para1.textContent = `The quote is ${quoteLength} characters long.`;
+    let para2 = document.createElement("p");
     para2.textContent = revisedQuote;
 
     section.appendChild(para1);
     section.appendChild(para2);
   </script>
-
 </html>
