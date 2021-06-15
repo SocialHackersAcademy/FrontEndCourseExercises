@@ -1,0 +1,35 @@
+function troubleshooting() {
+	const a = 1;
+	const b = 1;
+
+	// Edit between these lines
+	// =================================
+	return a + b;
+
+	// =================================
+}
+
+2. 
+
+function troubleshooting() {
+	const a = 1;
+	const b = 1;
+
+	// Edit between these lines
+	// =================================
+	return a + b;
+
+	// =================================
+}
+
+3. 
+
+const a = 1+8
+const b = 22*3
+const c = 5%4
+const d = a-17
+const e = (a+b+c+d)
+
+module.exports = {a, b, c, d, e}
+
+
