@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Strings: Task 3</title>
     <style>
       p {
@@ -17,30 +17,25 @@
   </head>
 
   <body>
-
-    <section class="preview">
-
-
-
-    </section>
-
+    <section class="preview"></section>
   </body>
   <script>
-    let quote = 'I dO nOT lIke gREen eGgS anD HAM';
+    let quote = "I dO nOT lIke gREen eGgS anD HAM";
 
     // Add your code here
-
+    let fixedQuote = quote[0] + quote.slice(1).toLowerCase();
+    fixedQuote = fixedQuote.replace("green eggs and ham", "smelly fish");
+    let finalQuote = fixedQuote + ".";
     // Don't edit the code below here!
 
-    const section = document.querySelector('section');
+    const section = document.querySelector("section");
 
-    let para1 = document.createElement('p');
+    let para1 = document.createElement("p");
     para1.textContent = fixedQuote;
-    let para2 = document.createElement('p');
+    let para2 = document.createElement("p");
     para2.textContent = finalQuote;
 
     section.appendChild(para1);
     section.appendChild(para2);
   </script>
-
 </html>
