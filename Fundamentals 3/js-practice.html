@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //    1. Write a function called add9 that takes one number and returns that number + 9.
+      function add9(number) {
+        return number + 9;
+      }
+      console.log(add9(3));
+
+      //   2.Write a function called multiplyNum that takes 2 numbers and returns their product.
+      function multiplyNum(number1, number2) {
+        return number1 * number2;
+      }
+      console.log(multiplyNum(3, 2));
+      //   Write a function called capitalizeStr that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh. [*]
+      function capitalizeStr(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+      }
+
+      console.log(capitalizeStr("hi"));
+      console.log(capitalizeStr("mOndAy"));
+
+      //   4. Write a function called lastLetter that takes a string and returns the last letter of that string [*]:
+      function lastLetter(string) {
+        return string.slice(-1);
+      }
+
+      console.log(lastLetter("hi"));
+      console.log(lastLetter("mOndAy"));
+
+      //  5. Write a function called average that takes 3 numbers and returns their average.
+      function average(num1, num2, num3) {
+        return (num1 + num2 + num3) / 3;
+      }
+      console.log(average(2, 6, 1));
+
+      //   6. Write a function called greaterNum that takes 2 numbers and returns the greater one.
+      function greatNum(num1, num2) {
+        if (num1 >= num2) {
+          return num1;
+        } else {
+          return num2;
+        }
+      }
+      console.log(greatNum(3, 4));
+    </script>
+  </body>
+</html>
