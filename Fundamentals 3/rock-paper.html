@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function computerPlay() {
+        let gameWords = ["Rock", "Paper", "Scissors"];
+        let randomWord =
+          gameWords[Math.floor(Math.random() * gameWords.length)];
+        return randomWord;
+      }
+      console.log(computerPlay());
+
+      let playerScore = 0;
+      let computerScore = 0;
+      let draws = 0;
+
+      function playRound(playerSelection, computerSelection) {
+        playerSelection = playerSelection.toLowerCase();
+
+        if (computerSelection === "Rock") {
+          if (playerSelection === "rock") {
+            draws++;
+            return "Draw";
+          } else if (playerSelection === "paper") {
+            playerScore++;
+            return "You Won";
+          } else if (playerSelection === "scissors") {
+            computerScore++;
+            return "You Lost";
+          }
+        }
+
+        if (computerSelection === "Paper") {
+          if (playerSelection === "paper") {
+            draws++;
+            return "Draw";
+          } else if (playerSelection === "scissors") {
+            playerScore++;
+            return "You Won";
+          } else if (playerSelection === "rock") {
+            computerScore++;
+            return "You Lost";
+          }
+        }
+
+        if (computerSelection === "Scissors") {
+          if (playerSelection === "scissors") {
+            draws++;
+            return "Draw";
+          } else if (playerSelection === "rock") {
+            playerScore++;
+            return "You Won";
+          } else if (playerSelection === "paper") {
+            computerScore++;
+            return "You Lost";
+          }
+        }
+
+        console.log(playerScore());
+      }
+
+      const computerSelection = computerPlay();
+      for (let i = 0; i < 7; i++) {
+        let computerSelection = computerPlay();
+        let userSelection = prompt();
+        let round = playRound(userSelection, computerSelection);
+        console.log(round);
+      }
+
+      function gameScore() {
+        if (playerScore > computerScore) {
+          return "You won the game";
+        } else if (playerScore < computerScore) {
+          return "You lost the game";
+        } else if (playerScore === computerScore) {
+          return "You lost the game";
+        }
+      }
+      console.log(gameScore());
+    </script>
+  </body>
+</html>
