@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Strings: Task 4</title>
     <style>
       p {
@@ -17,30 +17,23 @@
   </head>
 
   <body>
-
-    <section class="preview">
-
-
-
-    </section>
-
+    <section class="preview"></section>
   </body>
   <script>
-    let theorem = 'Pythagorean theorem';
+    let theorem = "Pythagorean theorem";
 
     let a = 5;
     let b = 8;
 
-    let myString = 'Using *, we can work out that that if the two shortest sides of a right-angled triangle have lengths of * and *, the length of the hypotenuse is *.';
-
-
+    let myString = `Using ${theorem}, we can work out that that if the two shortest sides of a right-angled triangle have lengths of ${a} and ${b}, the length of the hypotenuse is ${Math.sqrt(
+      a ** 2 + b ** 2
+    )}.`;
     // Don't edit the code below here!
 
-    const section = document.querySelector('section');
+    const section = document.querySelector("section");
 
-    let para1 = document.createElement('p');
+    let para1 = document.createElement("p");
     para1.textContent = myString;
     section.appendChild(para1);
   </script>
-
 </html>
